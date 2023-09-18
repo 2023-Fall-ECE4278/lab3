@@ -1,0 +1,8 @@
+/home/SOC60/lab3/DMAC/RTL/DMAC_CFG.sv
+/home/SOC60/lab3/DMAC/RTL/DMAC_ENGINE.sv
+/home/SOC60/lab3/DMAC/RTL/DMAC_TOP.sv
+/home/SOC60/lab3/DMAC/SIM/TB/AXI_INTF.sv
+/home/SOC60/lab3/DMAC/SIM/TB/AXI_SLAVE.sv
+/home/SOC60/lab3/DMAC/SIM/TB/AXI_TYPEDEF.svh
+/home/SOC60/lab3/DMAC/SIM/TB/DMAC_TOP_TB.sv
+/home/SOC60/lab3/DMAC/SIM/TB/timescale.v

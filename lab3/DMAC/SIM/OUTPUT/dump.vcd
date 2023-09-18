@@ -1,0 +1,402 @@
+$date
+	Mon Sep 18 13:04:33 2023
+$end
+
+$version
+	Synopsys VCS version R-2020.12-SP1-1_Full64
+$end
+
+$timescale
+	1ps
+$end
+
+$comment Csum: 1 1a38064d289832bf $end
+
+
+$scope module DMAC_TOP_TB $end
+
+$scope module u_DUT $end
+$var wire 1 ! clk $end
+$var wire 1 " rst_n $end
+$var wire 1 # psel_i $end
+$var wire 1 $ penable_i $end
+$var wire 12 % paddr_i [11:0] $end
+$var wire 1 & pwrite_i $end
+$var wire 32 ' pwdata_i [31:0] $end
+$var reg 1 ( pready_o $end
+$var reg 32 ) prdata_o [31:0] $end
+$var reg 1 * pslverr_o $end
+$var wire 4 + awid_o [3:0] $end
+$var wire 32 , awaddr_o [31:0] $end
+$var wire 4 - awlen_o [3:0] $end
+$var wire 3 . awsize_o [2:0] $end
+$var wire 2 / awburst_o [1:0] $end
+$var wire 1 0 awvalid_o $end
+$var wire 1 1 awready_i $end
+$var wire 4 2 wid_o [3:0] $end
+$var wire 32 3 wdata_o [31:0] $end
+$var wire 4 4 wstrb_o [3:0] $end
+$var wire 1 5 wlast_o $end
+$var wire 1 6 wvalid_o $end
+$var wire 1 7 wready_i $end
+$var wire 4 8 bid_i [3:0] $end
+$var wire 2 9 bresp_i [1:0] $end
+$var wire 1 : bvalid_i $end
+$var wire 1 ; bready_o $end
+$var wire 4 < arid_o [3:0] $end
+$var wire 32 = araddr_o [31:0] $end
+$var wire 4 > arlen_o [3:0] $end
+$var wire 3 ? arsize_o [2:0] $end
+$var wire 2 @ arburst_o [1:0] $end
+$var wire 1 A arvalid_o $end
+$var wire 1 B arready_i $end
+$var wire 4 C rid_i [3:0] $end
+$var wire 32 D rdata_i [31:0] $end
+$var wire 2 E rresp_i [1:0] $end
+$var wire 1 F rlast_i $end
+$var wire 1 G rvalid_i $end
+$var wire 1 H rready_o $end
+$var wire 32 I src_addr [31:0] $end
+$var wire 32 J dst_addr [31:0] $end
+$var wire 16 K byte_len [15:0] $end
+$var wire 1 L start $end
+$var wire 1 M done $end
+
+$scope module u_cfg $end
+$var wire 1 ! clk $end
+$var wire 1 " rst_n $end
+$var wire 1 # psel_i $end
+$var wire 1 $ penable_i $end
+$var wire 12 % paddr_i [11:0] $end
+$var wire 1 & pwrite_i $end
+$var wire 32 ' pwdata_i [31:0] $end
+$var reg 1 N pready_o $end
+$var reg 32 O prdata_o [31:0] $end
+$var reg 1 P pslverr_o $end
+$var reg 32 Q src_addr_o [31:0] $end
+$var reg 32 R dst_addr_o [31:0] $end
+$var reg 16 S byte_len_o [15:0] $end
+$var wire 1 L start_o $end
+$var wire 1 M done_i $end
+$var reg 32 T src_addr [31:0] $end
+$var reg 32 U dst_addr [31:0] $end
+$var reg 16 V byte_len [15:0] $end
+$var wire 1 W wren $end
+$var wire 1 X start $end
+$var reg 32 Y rdata [31:0] $end
+$upscope $end
+
+
+$scope module u_engine $end
+$var wire 1 ! clk $end
+$var wire 1 " rst_n $end
+$var wire 32 I src_addr_i [31:0] $end
+$var wire 32 J dst_addr_i [31:0] $end
+$var wire 16 K byte_len_i [15:0] $end
+$var wire 1 L start_i $end
+$var wire 1 M done_o $end
+$var wire 4 + awid_o [3:0] $end
+$var wire 32 , awaddr_o [31:0] $end
+$var wire 4 - awlen_o [3:0] $end
+$var wire 3 . awsize_o [2:0] $end
+$var wire 2 / awburst_o [1:0] $end
+$var wire 1 0 awvalid_o $end
+$var wire 1 1 awready_i $end
+$var wire 4 2 wid_o [3:0] $end
+$var wire 32 3 wdata_o [31:0] $end
+$var wire 4 4 wstrb_o [3:0] $end
+$var wire 1 5 wlast_o $end
+$var wire 1 6 wvalid_o $end
+$var wire 1 7 wready_i $end
+$var wire 4 8 bid_i [3:0] $end
+$var wire 2 9 bresp_i [1:0] $end
+$var wire 1 : bvalid_i $end
+$var wire 1 ; bready_o $end
+$var wire 4 < arid_o [3:0] $end
+$var wire 32 = araddr_o [31:0] $end
+$var wire 4 > arlen_o [3:0] $end
+$var wire 3 ? arsize_o [2:0] $end
+$var wire 2 @ arburst_o [1:0] $end
+$var wire 1 A arvalid_o $end
+$var wire 1 B arready_i $end
+$var wire 4 C rid_i [3:0] $end
+$var wire 32 D rdata_i [31:0] $end
+$var wire 2 E rresp_i [1:0] $end
+$var wire 1 F rlast_i $end
+$var wire 1 G rvalid_i $end
+$var wire 1 H rready_o $end
+$var reg 3 Z state [2:0] $end
+$var reg 3 [ state_n [2:0] $end
+$var reg 32 \ src_addr [31:0] $end
+$var reg 32 ] src_addr_n [31:0] $end
+$var reg 32 ^ dst_addr [31:0] $end
+$var reg 32 _ dst_addr_n [31:0] $end
+$var reg 16 ` cnt [15:0] $end
+$var reg 16 a cnt_n [15:0] $end
+$var reg 32 b data_buf [31:0] $end
+$var reg 32 c data_buf_n [31:0] $end
+$var reg 1 d arvalid $end
+$var reg 1 e rready $end
+$var reg 1 f awvalid $end
+$var reg 1 g wvalid $end
+$var reg 1 h done $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+0M
+0L
+0X
+0h
+0W
+bxxxxxxxxxxxxxxxx K
+bxxxxxxxxxxxxxxxx S
+bxxxxxxxxxxxxxxxx `
+bxxxxxxxxxxxxxxxx a
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx b
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx c
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx J
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx _
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx R
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx )
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Y
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx I
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ]
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Q
+bxxx Z
+bxxx [
+bxxxxxxxxxxxxxxxx V
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx U
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx O
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx T
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ^
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
+0!
+1N
+1(
+0P
+0*
+00
+06
+0A
+0H
+0"
+b000000000000 %
+b00000000000000000000000000000000 '
+b0000 +
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ,
+b0000 -
+b010 .
+b01 /
+b0000 2
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 3
+b1111 4
+bxxxx 8
+b00 9
+b0000 <
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx =
+b0000 >
+b010 ?
+b01 @
+bxxxx C
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx D
+b00 E
+0#
+0$
+0&
+01
+15
+07
+0:
+1;
+0B
+0F
+0G
+0f
+0g
+0d
+0e
+$end
+#10000
+1!
+b0000 8
+b0000 C
+b000 Z
+b00000000000000000000000000000000 \
+b00000000000000000000000000000000 =
+b00000000000000000000000000000000 ^
+b00000000000000000000000000000000 ,
+b0000000000000000 `
+b00000000000000000000000000000000 b
+b00000000000000000000000000000000 3
+b00000000000000000000000000000000 T
+b00000000000000000000000000000000 Q
+b00000000000000000000000000000000 I
+b00000000000000000000000000000000 U
+b00000000000000000000000000000000 R
+b00000000000000000000000000000000 J
+b0000000000000000 V
+b0000000000000000 S
+b0000000000000000 K
+b00000000000000000000000000000000 Y
+b00000000000000000000000000000000 O
+b00000000000000000000000000000000 )
+b00000000000000000000000000000000 c
+b0000000000000000 a
+b00000000000000000000000000000000 _
+b00000000000000000000000000000000 ]
+b000 [
+#20000
+0!
+#30000
+1!
+#40000
+0!
+#50000
+1!
+1"
+#60000
+0!
+#70000
+1!
+#80000
+0!
+#90000
+1!
+#100000
+0!
+#110000
+1!
+#120000
+0!
+#130000
+1!
+#140000
+0!
+#150000
+1!
+#160000
+0!
+#170000
+1!
+#180000
+0!
+#190000
+1!
+#200000
+0!
+#210000
+1!
+#220000
+0!
+#230000
+1!
+#240000
+0!
+#250000
+1!
+#251000
+1#
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx '
+#260000
+0!
+#270000
+1!
+b00000000000000010000000100000001 Y
+b00000000000000010000000100000001 O
+b00000000000000010000000100000001 )
+#271000
+1$
+#280000
+0!
+#290000
+1!
+0#
+0$
+bxxxxxxxxxxxx %
+x&
+#291000
+1#
+b000100000000 %
+0&
+#300000
+0!
+#310000
+1!
+b00000000000000000000000000000000 Y
+b00000000000000000000000000000000 O
+b00000000000000000000000000000000 )
+#311000
+1$
+#320000
+0!
+#330000
+1!
+0#
+0$
+bxxxxxxxxxxxx %
+x&
+#331000
+1#
+b000100000100 %
+0&
+#340000
+0!
+#350000
+1!
+#351000
+1$
+#360000
+0!
+#370000
+1!
+0#
+0$
+bxxxxxxxxxxxx %
+x&
+#371000
+1#
+b000100001000 %
+0&
+#380000
+0!
+#390000
+1!
+#391000
+1$
+#400000
+0!
+#410000
+1!
+0#
+0$
+bxxxxxxxxxxxx %
+x&
+#411000
+1#
+b000100010000 %
+0&
+#420000
+0!
+#430000
+1!
+#431000
+1$
+#440000
+0!
+#450000
+1!
+0#
+0$
+bxxxxxxxxxxxx %
+x&
+#460000
+0!
+#470000
+1!
